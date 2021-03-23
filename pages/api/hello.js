@@ -1,10 +1,10 @@
 import Twitter from 'twitter-lite'
 
 export default async (req, res) => {
-	const consumer_key = process.env.CONSUMER_KEY
-	const consumer_secret = process.env.CONSUMER_SECRET
-	const access_token_key = process.env.ACCESS_TOKEN_KEY
-	const access_token_secret = process.env.ACCESS_TOKEN_SECRET
+	const consumer_key = process.env.TWITTER_CONSUMER_KEY
+	const consumer_secret = process.env.TWITTER_CONSUMER_SECRET
+	const access_token_key = process.env.TWITTER_ACCESS_TOKEN_KEY
+	const access_token_secret = process.env.TWITTER_ACCESS_TOKEN_SECRET
 
 	const client = new Twitter({ consumer_key, consumer_secret, access_token_key, access_token_secret })
 
