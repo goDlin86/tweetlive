@@ -14,7 +14,7 @@ export default function Tweets() {
             {data.values.map(d => {
                 return (
                     <div>
-                        <h1>{d.trend.name}</h1>
+                        <h1 className="truncate">{d.trend.name}</h1>
                         {d.ids.map(id => <Tweet options={{ width: "400px"/*, theme: "dark"*/ }} tweetId={id} />)}
                     </div>
                 )
