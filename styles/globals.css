@@ -13,6 +13,9 @@
     @apply text-xl font-bold;
   }
 
+  .tweet {
+    @apply dark:bg-neutral-900 p-3 rounded-xl;
+  }
   .twitter, .twitter-verified {
     @apply w-6 h-6 inline-block dark:bg-white;
   }
