@@ -12,10 +12,14 @@
   h2 {
     @apply text-xl font-bold;
   }
-  
+
+  .twitter, .twitter-verified {
+    @apply w-6 h-6 inline-block dark:text-white;
+  }
+  .twitter {
+    @apply bg-[url('/twitter.svg')];
+  }
   .twitter-verified {
-    width: 40px;
-    height: 40px;
-    background-image: url('/twitter.svg');
+    @apply bg-[url('/twitter-verified.svg')];
   }
 }

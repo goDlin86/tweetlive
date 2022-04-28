@@ -15,11 +15,11 @@ export default function TweetsView() {
             {data.map(t => {
                 return (
                     <div>
-                        <img src='twitter.svg' />
-                        <img src={t.user.profile_image_url_https} />
+                        <img className='rounded-full' src={t.user.profile_image_url_https} />
                         <h2 className='truncate'>
                             {'@' + t.user.screen_name}
                             {t.user.verified ? <div className='twitter-verified' /> : null}
+                            <div className='twitter' />
                         </h2>
                         {t.text}
                     </div>
