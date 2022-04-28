@@ -9,7 +9,15 @@ export default async (req, res) => {
 	const client = new Twitter({ consumer_key, consumer_secret, access_token_key, access_token_secret })
 
     try {
-        const timeline = await client.get('statuses/user_timeline', { screen_name: 'elonmusk', count: 20 })
+        const timeline = await client.get(
+            'statuses/user_timeline', 
+            { 
+                screen_name: 'elonmusk', 
+                count: 20, 
+                exclude_replies: true, 
+                include_rts: true 
+            }
+        )
         res.status(200).json(timeline)
     } catch (error) {
         console.error(error)

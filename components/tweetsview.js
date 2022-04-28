@@ -13,6 +13,7 @@ export default function TweetsView() {
             {data.map(t => {
                 return (
                     <div>
+                        <img src={t.user.profile_image_url_https} />
                         <h1 className="truncate">{t.user.screen_name}</h1>
                         {t.text}
                     </div>
