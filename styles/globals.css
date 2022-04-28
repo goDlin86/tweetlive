@@ -4,10 +4,10 @@
 
 @layer base {
   body {
-    @apply dark:bg-slate-900;
+    @apply dark:bg-slate-900 dark:text-white;
   }
   h1 {
-    @apply text-2xl font-bold dark:text-white;
+    @apply text-2xl font-bold;
   }
   h2 {
     @apply text-xl font-bold;
