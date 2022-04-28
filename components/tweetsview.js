@@ -17,6 +17,7 @@ export default function TweetsView() {
                     <div>
                         <img src='twitter.svg' />
                         <img src={t.user.profile_image_url_https} />
+                        {t.user.verified ? <img src='twitter-verified.svg' /> : null}
                         <h1 className='truncate'>{t.user.screen_name}</h1>
                         {t.text}
                     </div>
