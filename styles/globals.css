@@ -14,12 +14,14 @@
   }
 
   .twitter, .twitter-verified {
-    @apply w-6 h-6 inline-block dark:text-white;
+    @apply w-6 h-6 inline-block dark:bg-white;
   }
   .twitter {
-    @apply bg-[url('/twitter.svg')];
+    -webkit-mask-image: url(/twitter.svg);
+    mask-image: url(/twitter.svg);
   }
   .twitter-verified {
-    @apply bg-[url('/twitter-verified.svg')];
+    -webkit-mask-image: url(/twitter-verified.svg);
+    mask-image: url(/twitter-verified.svg);
   }
 }
