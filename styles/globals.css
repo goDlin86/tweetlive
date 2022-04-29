@@ -24,4 +24,9 @@
     -webkit-mask-image: url(/twitter-verified.svg);
     mask-image: url(/twitter-verified.svg);
   }
+  .heart {
+    @apply w-6 h-6 dark:bg-white inline-block;
+    -webkit-mask-image: url(/heart.svg);
+    mask-image: url(/heart.svg);
+  }
 }
