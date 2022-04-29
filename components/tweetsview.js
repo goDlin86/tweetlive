@@ -19,17 +19,17 @@ export default function TweetsView() {
                             <div>
                                 <img className='rounded-full' src={t.user.profile_image_url_https} />
                             </div>
-                            <div className='truncate'>
-                                <h2>
+                            <div>
+                                <h2 className='truncate'>
                                     {'@' + t.user.screen_name}
-                                    {t.user.verified ? <div className='twitter-verified' /> : null}
                                 </h2>
+                                {t.user.verified ? <div className='twitter-verified' /> : null}
                             </div>
                             <div className='twitter' />
                         </div>
                         {t.text}
                         <div>
-                            {new Date(t.created_at).toLocaleDateString('ru-RU')}
+                            {new Date(t.created_at).toLocaleDateString('ru-RU', { hour: '2-digit', minute: '2-digit', year: 'numeric', month: 'narrow', day: 'numeric' })}
                         </div>
                     </div>
                 )

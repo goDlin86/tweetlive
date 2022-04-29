@@ -20,7 +20,7 @@
     mask-image: url(/twitter.svg);
   }
   .twitter-verified {
-    @apply w-4 h-4 inline-block dark:bg-white;
+    @apply w-4 h-4 ml-1 inline-block dark:bg-white;
     -webkit-mask-image: url(/twitter-verified.svg);
     mask-image: url(/twitter-verified.svg);
   }
