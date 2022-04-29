@@ -12,10 +12,10 @@ export default async (req, res) => {
         const timeline = await client.get(
             'statuses/user_timeline', 
             { 
-                screen_name: 'elonmusk', 
-                count: 20, 
-                exclude_replies: true, 
-                include_rts: true 
+                screen_name: 'elonmusk',
+                count: 40,
+                exclude_replies: true,
+                include_rts: true
             }
         )
         res.status(200).json(timeline)
