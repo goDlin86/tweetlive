@@ -28,12 +28,12 @@ export default function TweetsView() {
                             <div className='twitter' />
                         </div>
                         {t.text}
-                        <div className='text-slate-400'>
+                        <div className='text-slate-300 my-2'>
                             {new Date(t.created_at).toLocaleDateString('ru-RU', { hour: '2-digit', minute: '2-digit', year: 'numeric', month: 'short', day: 'numeric' })}
                         </div>
                         <div>
                             <div className='heart' />
-                            {t.favorite_count}
+                            <div className='align-middle ml-1'>{t.favorite_count}</div>
                         </div>
                     </div>
                 )
