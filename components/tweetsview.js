@@ -14,13 +14,17 @@ export default function TweetsView() {
         <>
             {data.map(t => {
                 return (
-                    <div className='tweet'>
-                        <img className='rounded-full' src={t.user.profile_image_url_https} />
-                        <h2 className='truncate'>
-                            {'@' + t.user.screen_name}
-                            {t.user.verified ? <div className='twitter-verified' /> : null}
+                    <div className='p-3 rounded-xl border-neutral-900'>
+                        <div className='grid grid-cols-[40px_1fr_24px] gap-x-2'>
+                            <div>
+                                <img className='rounded-full' src={t.user.profile_image_url_https} />
+                            </div>
+                            <div className='truncate'>
+                                {'@' + t.user.screen_name}
+                                {t.user.verified ? <div className='twitter-verified' /> : null}
+                            </div>
                             <div className='twitter' />
-                        </h2>
+                        </div>
                         {t.text}
                     </div>
                 )
