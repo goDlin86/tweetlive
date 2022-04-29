@@ -29,7 +29,7 @@ export default function TweetsView() {
                         </div>
                         {t.text}
                         <div>
-                            {t.created_at}
+                            {new Date(t.created_at).toLocaleDateString('ru-RU')}
                         </div>
                     </div>
                 )
