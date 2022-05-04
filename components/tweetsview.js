@@ -1,4 +1,5 @@
 import useSwr from 'swr'
+import millify from 'millify'
 
 const fetcher = (url) => fetch(url).then((res) => res.json())
 
@@ -28,12 +29,12 @@ export default function TweetsView() {
                             <div className='twitter' />
                         </div>
                         {t.text}
-                        <div className='text-slate-300 my-2'>
+                        <div className='text-slate-500 my-2'>
                             {new Date(t.created_at).toLocaleDateString('ru-RU', { hour: '2-digit', minute: '2-digit', year: 'numeric', month: 'short', day: 'numeric' })}
                         </div>
                         <div>
-                            <div className='heart' />
-                            <div className='align-middle ml-1'>{t.favorite_count}</div>
+                            <div className='align-middle heart' />
+                            <div className='align-middle ml-1'>{millify(t.favorite_count)}</div>
                         </div>
                     </div>
                 )
