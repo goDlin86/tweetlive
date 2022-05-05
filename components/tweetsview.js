@@ -33,8 +33,8 @@ export default function TweetsView() {
                             {new Date(t.created_at).toLocaleDateString('ru-RU', { hour: '2-digit', minute: '2-digit', year: 'numeric', month: 'short', day: 'numeric' })}
                         </div>
                         <div>
-                            <div className='align-middle heart' />
-                            <div className='align-middle ml-1'>{millify(t.favorite_count)}</div>
+                            <div className='align-middle heart inline-block' />
+                            <div className='align-middle ml-1 inline-block'>{millify(t.favorite_count)}</div>
                         </div>
                     </div>
                 )

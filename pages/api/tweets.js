@@ -13,7 +13,7 @@ export default async (req, res) => {
             'statuses/user_timeline', 
             { 
                 screen_name: 'elonmusk',
-                count: 40,
+                count: 60,
                 exclude_replies: true,
                 include_rts: true
             }
