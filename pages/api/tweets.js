@@ -21,7 +21,7 @@ export default async (req, res) => {
     )))
 
     const fulfilled = results.filter(result => result.status === "fulfilled")
-    const timeline = fulfilled.reduce((result, cur) => [...result, cur.value], [])
+    const timeline = fulfilled.reduce((result, cur) => result.concat(cur.value), [])
 
     //const sorted = timeline.sort((a, b) => new Date(b.created_at) - new Date(a.created_at))
 
