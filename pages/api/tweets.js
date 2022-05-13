@@ -1,12 +1,12 @@
 import Twitter from 'twitter-lite'
 
 export default async (req, res) => {
-	const consumer_key = process.env.TWITTER_CONSUMER_KEY
-	const consumer_secret = process.env.TWITTER_CONSUMER_SECRET
-	const access_token_key = process.env.TWITTER_ACCESS_TOKEN_KEY
-	const access_token_secret = process.env.TWITTER_ACCESS_TOKEN_SECRET
+    const consumer_key = process.env.TWITTER_CONSUMER_KEY
+    const consumer_secret = process.env.TWITTER_CONSUMER_SECRET
+    const access_token_key = process.env.TWITTER_ACCESS_TOKEN_KEY
+    const access_token_secret = process.env.TWITTER_ACCESS_TOKEN_SECRET
 
-	const client = new Twitter({ consumer_key, consumer_secret, access_token_key, access_token_secret })
+    const client = new Twitter({ consumer_key, consumer_secret, access_token_key, access_token_secret })
 
     const users = ['elonmusk', 'sommerray']
 
@@ -20,13 +20,13 @@ export default async (req, res) => {
         }
     )))
 
-    const timeline = results
-        .filter(result => result.status === "fulfilled")
-        .reduce((result, cur) => {
-            result = [...result, cur.value]
-            return result
-        }, [])
-        .sort((a, b) => new Date(b.created_at) - new Date(a.created_at))
+    const fulfilled = results.filter(result => result.status === "fulfilled")
+    const timeline = fulfilled.reduce((result, cur) => {
+        result = [...result, cur.value]
+        return result
+    }, [])
+
+    const sorted = timeline.sort((a, b) => new Date(b.created_at) - new Date(a.created_at))
 
     // try {
     //     const timeline = await client.get(
@@ -38,5 +38,5 @@ export default async (req, res) => {
     //     res.status(500)
     // }
 
-    res.status(200).json(timeline)
+    res.status(200).json(sorted)
 }
