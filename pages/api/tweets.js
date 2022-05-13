@@ -20,7 +20,10 @@ export default async (req, res) => {
         }
     )))
 
-    const timeline = results.filter(result => result.status === "fulfilled").map(result => result.value)
+    const timeline = results
+        .filter(result => result.status === "fulfilled")
+        .reduce((result, cur) => result.push(cur.value), [])
+        .sort((a, b) => new Date(b.created_at) - new Date(a.created_at))
 
     // try {
     //     const timeline = await client.get(
