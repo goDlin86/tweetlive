@@ -22,7 +22,10 @@ export default async (req, res) => {
 
     const timeline = results
         .filter(result => result.status === "fulfilled")
-        .reduce((result, cur) => result.push(cur.value), [])
+        .reduce((result, cur) => {
+            result = [...result, cur.value]
+            return result
+        }, [])
         .sort((a, b) => new Date(b.created_at) - new Date(a.created_at))
 
     // try {
