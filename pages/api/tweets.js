@@ -35,5 +35,5 @@ export default async (req, res) => {
     //     res.status(500)
     // }
 
-    res.status(200).json(sorted)
+    res.status(200).json(timeline)
 }
