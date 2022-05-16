@@ -34,7 +34,7 @@ export default function TweetsView() {
                         </div>
                         <div>
                             <div className='align-middle heart inline-block' />
-                            <div className='align-middle ml-2 inline-block dark:text-rose-600 text-opacity-70'>{millify(t.favorite_count)}</div>
+                            <div className='align-middle ml-1 inline-block dark:text-rose-600 text-opacity-70'>{millify(t.favorite_count)}</div>
                         </div>
                     </div>
                 )

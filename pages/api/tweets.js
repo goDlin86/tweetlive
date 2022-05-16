@@ -8,17 +8,19 @@ export default async (req, res) => {
 
     const client = new Twitter({ consumer_key, consumer_secret, access_token_key, access_token_secret })
 
-    const users = ['elonmusk', 'sommerray']
+    const users = ['elonmusk', 'sommerray', 'engineers_feed']
 
-    const results = await Promise.allSettled(users.map(u => client.get(
-        'statuses/user_timeline', 
-        { 
-            screen_name: u,
-            count: 60,
-            exclude_replies: true,
-            include_rts: false
-        }
-    )))
+    const results = await Promise.allSettled(
+        users.map(u => client.get(
+            'statuses/user_timeline', 
+            { 
+                screen_name: u,
+                count: 60,
+                exclude_replies: true,
+                include_rts: false
+            }
+        )
+    ))
 
     const timeline = results
         .filter(result => result.status === "fulfilled")
