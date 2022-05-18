@@ -1,5 +1,8 @@
 import useSwr from 'swr'
 import millify from 'millify'
+import dayjs from 'dayjs'
+import relativeTime from 'dayjs/plugin/relativeTime'
+dayjs.extend(relativeTime)
 
 const fetcher = (url) => fetch(url).then((res) => res.json())
 
@@ -28,9 +31,9 @@ export default function TweetsView() {
                             </div>
                             <div className='twitter' />
                         </div>
-                        {t.text}
+                        {t.text.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;')}
                         <div className='text-slate-500 my-2'>
-                            {new Date(t.created_at).toLocaleDateString('ru-RU', { hour: '2-digit', minute: '2-digit', year: 'numeric', month: 'short', day: 'numeric' })}
+                            {dayjs(t.created_at).fromNow()}
                         </div>
                         <div>
                             <div className='align-middle heart inline-block' />
