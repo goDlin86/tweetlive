@@ -31,7 +31,7 @@ export default function TweetsView() {
                             </div>
                             <div className='twitter' />
                         </div>
-                        {t.text.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;')}
+                        {t.text.replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/&/g, '&amp;')}
                         <div className='text-slate-500 my-2'>
                             {dayjs(t.created_at).fromNow()}
                         </div>
