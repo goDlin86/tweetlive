@@ -35,10 +35,10 @@ export default function TweetsView() {
                         <div className='text-slate-500 my-2'>
                             {dayjs(t.created_at).fromNow()}
                         </div>
-                        <div>
+                        <div className='text-slate-500'>
                             <div className='align-middle comment inline-block' />
-                            <div className='align-middle ml-1 inline-block dark:text-slate-600'>{millify(t.retweet_count)}</div>
-                            &bull;
+                            <div className='align-middle ml-1 inline-block text-slate-500'>{millify(t.retweet_count)}</div>
+                            &nbsp;&bull;&nbsp;
                             <div className='align-middle heart inline-block' />
                             <div className='align-middle ml-1 inline-block dark:text-rose-600 text-opacity-70'>{millify(t.favorite_count)}</div>
                         </div>

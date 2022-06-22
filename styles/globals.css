@@ -25,7 +25,7 @@
     mask-image: url(/twitter-verified.svg);
   }
   .comment {
-    @apply w-6 h-6 dark:bg-slate-600 inline-block;
+    @apply w-6 h-6 bg-slate-500 inline-block;
     -webkit-mask-image: url(/comment.svg);
     mask-image: url(/comment.svg);
   }
