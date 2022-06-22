@@ -24,8 +24,13 @@
     -webkit-mask-image: url(/twitter-verified.svg);
     mask-image: url(/twitter-verified.svg);
   }
+  .comment {
+    @apply w-6 h-6 dark:bg-slate-800 inline-block;
+    -webkit-mask-image: url(/comment.svg);
+    mask-image: url(/comment.svg);
+  }
   .heart {
-    @apply w-6 h-6 dark:bg-rose-600 inline-block;
+    @apply w-6 h-6 dark:bg-rose-600 bg-opacity-70 inline-block;
     -webkit-mask-image: url(/heart.svg);
     mask-image: url(/heart.svg);
   }
