@@ -40,7 +40,7 @@ export default function TweetsView() {
                             <div className='align-middle ml-1 inline-block'>{millify(t.retweet_count)}</div>
                             &nbsp;&bull;&nbsp;
                             <div className='align-middle heart inline-block' />
-                            <div className='align-middle ml-1 inline-block dark:text-rose-400 text-opacity-70'>{millify(t.favorite_count)}</div>
+                            <div className='align-middle ml-1 inline-block dark:text-rose-500 text-opacity-70'>{millify(t.favorite_count)}</div>
                         </div>
                     </div>
                 )

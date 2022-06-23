@@ -30,7 +30,7 @@
     mask-image: url(/comment.svg);
   }
   .heart {
-    @apply w-6 h-6 dark:bg-rose-400 bg-opacity-70 inline-block;
+    @apply w-6 h-6 dark:bg-rose-500 bg-opacity-70 inline-block;
     -webkit-mask-image: url(/heart.svg);
     mask-image: url(/heart.svg);
   }
