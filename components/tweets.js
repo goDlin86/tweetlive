@@ -1,13 +1,16 @@
-import useSwr from 'swr'
+'use client'
+
 import TweetEmbed from 'react-tweet-embed'
 
-const fetcher = (url) => fetch(url).then((res) => res.json())
+async function fetchData() {
+    const res = await fetch('https://tweetlive.vercel.app/api/trends')
+    const data = await res.json()
+    return data
+}
 
-export default function Tweets() {
-    const { data, error } = useSwr('/api/trends', fetcher, { revalidateOnFocus: false })
-
-    if (error) return <div>Failed to load</div>
-    if (!data) return <div>Loading...</div>
+export default async function Tweets() {
+    const data = await fetchData()
+    console.log(data)
 
     return (
         <>
