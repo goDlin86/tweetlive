@@ -14,7 +14,7 @@ export default async function Page() {
 
     return (
         <div className="grid grid-cols-1 2xl:grid-cols-5 xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 gap-4">
-            {data.values.map(user => user.ids.map(id => <TweetEmbed options={{ width: "400px", theme: "dark" }} tweetId={id} />))}
+            {/* {data.values.map(user => user.ids.map(id => <TweetEmbed options={{ width: "400px", theme: "dark" }} tweetId={id} />))} */}
         </div>
     )
 }
