@@ -1,16 +1,14 @@
-'use client'
+//import TweetEmbed from 'react-tweet-embed'
 
-import TweetEmbed from 'react-tweet-embed'
-
-async function fetchData() {
-    const res = await fetch('https://tweetlive.vercel.app/api/new')
-    const data = await res.json()
-    return data
-}
+// async function fetchData() {
+//     const res = await fetch('https://tweetlive.vercel.app/api/new')
+//     const data = await res.json()
+//     return data
+// }
 
 export default async function Page() {
-    const data = await fetchData()
-    console.log(data)
+    // const data = await fetchData()
+    // console.log(data)
 
     return (
         <div className="grid grid-cols-1 2xl:grid-cols-5 xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 gap-4">

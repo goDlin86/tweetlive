@@ -1,5 +1,3 @@
-'use client'
-
 import TweetEmbed from 'react-tweet-embed'
 
 async function fetchData() {
@@ -18,7 +16,7 @@ export default async function Tweets() {
                 return (
                     <div>
                         <h1 className="truncate">{d.trend.name}</h1>
-                        {/* {d.ids.map(id => <TweetEmbed options={{ width: "400px", theme: "dark" }} tweetId={id} />)} */}
+                        {d.ids.map(id => <TweetEmbed options={{ width: "400px", theme: "dark" }} tweetId={id} />)}
                     </div>
                 )
             })}
