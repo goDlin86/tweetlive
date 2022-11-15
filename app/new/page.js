@@ -1,3 +1,5 @@
+//'use client'
+
 //import TweetEmbed from 'react-tweet-embed'
 
 // async function fetchData() {
