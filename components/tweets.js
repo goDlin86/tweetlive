@@ -3,7 +3,7 @@
 import TweetEmbed from 'react-tweet-embed'
 
 async function fetchData() {
-    const res = await fetch('https://tweetlive.vercel.app/api/trends')
+    const res = await fetch('https://tweetlive.vercel.app/api/trends', { cache: 'no-store' })
     const data = await res.json()
     return data
 }

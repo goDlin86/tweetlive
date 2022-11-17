@@ -4,7 +4,7 @@ import relativeTime from 'dayjs/plugin/relativeTime'
 dayjs.extend(relativeTime)
 
 async function fetchData() {
-    const res = await fetch('https://tweetlive.vercel.app/api/tweets')
+    const res = await fetch('https://tweetlive.vercel.app/api/tweets', { cache: 'no-store' })
     const data = await res.json()
     return data
 }
